@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var http = require('http'), //This module provides the HTTP server functionalities
     path = require('path'), //The path module provides utilities for working with file and directory paths
     express = require('express'), //This module allows this app to respond to HTTP Requests, defines the routing and renders back the required content
@@ -6,56 +5,31 @@ var http = require('http'), //This module provides the HTTP server functionaliti
     xmlParse = require('xslt-processor').xmlParse, //This module allows us to work with XML files
     xsltProcess = require('xslt-processor').xsltProcess, //The same module allows us to utilise XSL Transformations
     xml2js = require('xml2js'); //This module does XML to JSON conversion and also allows us to get from JSON back to XML
-=======
-var http = require('http'),
-    path = require('path'),
-    express = require('express'),
-    fs = require('fs'),
-    xml2js =require ('xml2js'),
-    xmlParse = require('xslt-processor').xmlParse,
-    xsltProcess = require('xslt-processor').xsltProcess;
->>>>>>> d8ac2eaf54f5833297f42efacf4c628458319a82
 
 var router = express(); //The set our routing to be handled by Express
 var server = http.createServer(router); //This is where our server gets created
 
-<<<<<<< HEAD
 router.use(express.static(path.resolve(__dirname, 'views'))); //We define the views folder as the one where all static content will be served
 router.use(express.urlencoded({extended: true})); //We allow the data sent from the client to be coming in as part of the URL in GET and POST requests
 router.use(express.json()); //We include support for JSON that is coming from the client
 
 // Function to read in XML file and convert it to JSON
 function xmlFileToJs(filename, cb) {
-=======
-router.use(express.static(path.resolve(__dirname, 'views')));
-router.use(express.urlencoded({extended: true}));//allow browser to send us a form e.g. put the new value
-router.use(express.json());//tell the router to use json format
-// Function to read in XML file and convert it to JSON
-function xmlFileToJs(filename, cb) {//xml convert it to json
->>>>>>> d8ac2eaf54f5833297f42efacf4c628458319a82
   var filepath = path.normalize(path.join(__dirname, filename));
   fs.readFile(filepath, 'utf8', function(err, xmlStr) {
     if (err) throw (err);
     xml2js.parseString(xmlStr, {}, cb);
   });
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> d8ac2eaf54f5833297f42efacf4c628458319a82
 //Function to convert JSON to XML and save it
 function jsToXmlFile(filename, obj, cb) {
   var filepath = path.normalize(path.join(__dirname, filename));
   var builder = new xml2js.Builder();
   var xml = builder.buildObject(obj);
-<<<<<<< HEAD
   fs.writeFile(filepath, xml, cb);
 }
 //We define the root of our website and render index.html located inside the views folder
-=======
-  fs.writeFile(filepath, xml, cb);//save our paddys cafe
-}
->>>>>>> d8ac2eaf54f5833297f42efacf4c628458319a82
 router.get('/', function(req, res){
 
     res.render('index');
@@ -125,38 +99,7 @@ router.post('/post/delete', function(req, res) {
 
 });
 
-<<<<<<< HEAD
 //This is where we as the server to be listening to user with a specified IP and Port
-=======
-
-router.post('/post/json', function(req, res){
-    
-    function appendJSON(obj){
-
-        console.log(obj);
-
-        xmlFileToJs('PaddysCafe.xml', function(err, result){
-            if (err) throw (err);
-
-            result.cafemenu.section[obj.sec_n].entree.push({'item': obj.item, 'price': obj.price});//get down to
-            // the root element, one level deeper, push method to create an entree, appending to the new entree
-            console.log(result);
-
-            jsToXmlFile('PaddysCafe.xml', result, function(err){
-
-                if(err) console.log(err);
-            })
-        })
-
-
-}    
-
-appendJSON(req.body);
-res.redirect('back');
-
-})//looking for the post
-
->>>>>>> d8ac2eaf54f5833297f42efacf4c628458319a82
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function() {
   var addr = server.address();
   console.log("Server listening at", addr.address + ":" + addr.port);
