@@ -1,0 +1,19 @@
+{
+  "name": "horology",
+  "version": "1.0.0",
+  "description": "high horology",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gama munoz f",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "path": "^0.12.7",
+    "xml2js": "^0.4.22",
+    "xslt-processor": "^0.11.5"
+  }
+}

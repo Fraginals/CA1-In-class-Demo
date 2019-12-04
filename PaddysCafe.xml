@@ -11,14 +11,6 @@
     </entree>
   </section>
   <section name="Breakfast">
-    <entree>
-      <item>Two Eggs, any style</item>
-      <price>4.99</price>
-    </entree>
-    <entree>
-      <item>Paddy's Famous Peppers and Eggs</item>
-      <price>8.29</price>
-    </entree>
     <entree vegetarian="true">
       <item>Bowl of fruit</item>
       <price>6.99</price>
@@ -30,6 +22,10 @@
     <entree>
       <item>Croissant</item>
       <price>3.99</price>
+    </entree>
+    <entree>
+      <item>pain oh chocolate</item>
+      <price>200</price>
     </entree>
   </section>
   <section name="Lunch">
