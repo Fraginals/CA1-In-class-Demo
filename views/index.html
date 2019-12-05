@@ -6,67 +6,142 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>IWA Demo App</title>
+	<title>Timepieces WebApp</title>
 	<!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/PaddysCafeStyles.css" rel="stylesheet">
+	<link rel="stylesheet" type= "text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/Timepieces.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+    
+     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	 <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-		<div class="container">	<a class="navbar-brand" href="#">Paddy's Cafe</a>
+		<div class="container">	<a class="navbar-brand" href="#">Luxury and Designer Watches at Haute Horlogerie</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">	<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a></li>
-					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-				</ul>
+				
+                <ul class="nav navbar-nav navbar-right">
+					<li class="nav-item"><a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Watches</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Magazine</a></li>
+                    <li><a href="#">Sign Up  <i class="edit outline"></i></i></a></li>
+                    <li><a href="#"></i>Login  <i class="sign-in"></a></li>
+				    <li><a href="#"></i>Logout  <i class="sign-out"></a></li>
+				
+
+
+                </ul>
 			</div>
 		</div>
 	</nav>
 	<!-- Page Content -->
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 text-left">
-				<h1 class="mt-5">Welcome to Paddy's Cafe</h1>
-				<p class="lead">Select your entrees from the menu below.</p>
-			</div>
-			<div id="results" class="col-lg-8 text-center order-3"></div>
-			<div class="col-lg-4 text-center order-2">
+    <header class="jumbotron">
+		<!--<div class="row">
+			<div class="col-lg-12 text-center">-->
+				<h1 class="mt-5">Welcome to Timepieces</h1>
+				<p class="lead">Select your watch from our catalogue</p>
+    </header>
+            
+            
+			<div id="results" class="col-lg-8 text-center order-3"></div> <!-- with the div called results is where the table -->
+			<div class="col-lg-4 text-center order-2">                <!--is going to be put in-->
 				<form enctype="application/json" action="/post/json" method="post">
 					<div class="form-group">
 						<select class="form-control" name="sec_n">
-							<option value="0">Side Dishes</option>
-							<option value="1">Breakfast</option>
-							<option value="2">Lunch</option>
-							<option value="3">Dinner</option>
+						<option value="0">Sport Watches</option>
+                        <option value="1">Casual Watches</option>
+                        <option value="2">Luxury Watches</option>
+                        <option value="3">Dive Watches</option>
+                        <option value="4">Chronograph Watches</option>
 						</select>
 					</div>
 					<div class="form-group">
-						<input class="form-control" type="text" name="item" placeholder="Item">
+						<input class="form-control" type="text" name="brand" placeholder="Item">
 					</div>
 					<div class="form-group">
 						<input class="form-control" type="text" name="price" placeholder="Price">
 					</div>
+                    <div class="form-group">
+						<input class="form-control" type="text" name="precision" placeholder="Precision">
+					</div>
+                    <div class="form-group">
+						<input class="form-control" type="text" name="discount" placeholder="Discount">
+					</div>
+                    <div class="form-group">
+						<input class="form-control" type="text" name="stock" placeholder="Stock">
+					</div>
+
+
+                    <div>
 					<button type="submit" class="btn btn-primary btn-block">Submit</button>
-				</form>
-                    <button id="delete" class="btn btn-block btn-danger">Delete</button>
-                    <p class="text-muted">To delete an entree, click the required row first</p>
-			</div>
+                    </div>
+                </form>
+                    <button id="delete" class="btn btn-block btn-warning">Delete</button>
+                    <p class="text-muted">To delete an item please click on the especif raw</p>
+
+			 <hr class="my-4">
+            </div>
 		</div>
 	</div>
-	<footer class="footer">
+	<!-- <footer class="footer">
 		<div class="container">	<span class="text-muted">&copy; 2019</span>
 		</div>
-	</footer>
+	</footer> -->
+
+    
+<hr>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+    <span class="sr-only">100% Complete</span>
+  </div>
+</div>
+
+<!-- <footer class="footer"> -->
+      <div class="uicontainer">
+        <span class="text-muted">&copy;Copyright Timepieces SA. All rights reserved.  Terms of Use | Privacy Notice | Cookie Notice></span>
+      </div>
+      <a class="nav-link" href="#">Go up!</a>
+    <!-- </footer> -->
+
+<hr>
+<div class="containerbottom">
+ 
+<button class="ui facebook button">
+  <i class="facebook icon"></i>
+  Facebook
+</button>
+<button class="ui twitter button">
+  <i class="twitter icon"></i>
+  Twitter
+</button>
+<button class="ui instagram button">
+  <i class="instagram icon"></i>
+  Instagram
+</button>
+<button class="ui youtube button">
+  <i class="youtube icon"></i>
+  YouTube
+</button>
+
+</div>
+</br>
+
 	<!-- Bootstrap core JavaScript -->
 	<script src="jquery/jquery.min.js"></script>
 	<script src="jquery/table.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>
