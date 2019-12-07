@@ -1,3 +1,7 @@
+/*The following code belongs to the github account: https://github.com/mikhail-cct/CA1-In-class-Demo.git, 
+/*which was adjusted and mofidied in order to create the "Timepieces" Web App */
+
+
 function draw_table()//this is the code to draw the table, it goes to the link /get/html and takes the 
 {                    //html form and put inside the div called results
 	$("#results").empty();

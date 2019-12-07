@@ -22,20 +22,6 @@
       <discount>20%</discount>
       <stock>Available</stock>
     </watch>
-    <watch>
-      <brand>&amp;lt;h1&amp;gt;hello!&amp;lt;/h1&amp;gt;</brand>
-      <price/>
-      <precision/>
-      <discount/>
-      <stock/>
-    </watch>
-    <watch>
-      <brand/>
-      <price/>
-      <precision/>
-      <discount/>
-      <stock/>
-    </watch>
   </section>
   <section name="Casual Watches">
     <watch>
@@ -130,3 +116,7 @@
     </watch>
   </section>
 </catalogue>
+
+
+<!-- The above code belongs to the github account: https://github.com/mikhail-cct/CA1-In-class-Demo.git, -->
+<!-- which was adjusted and mofidied in order to create the "Timepieces" Web App -->

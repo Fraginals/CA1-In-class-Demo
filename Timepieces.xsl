@@ -52,3 +52,6 @@
                 </table><br/>
     </xsl:template>
 </xsl:stylesheet>
+
+<!-- The above code belongs to the github account: https://github.com/mikhail-cct/CA1-In-class-Demo.git, -->
+<!-- which was adjusted and mofidied in order to create the "Timepieces" Web App -->

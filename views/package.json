@@ -1,22 +1,12 @@
 {
-<<<<<<< HEAD
   "name": "horology",
   "version": "1.0.0",
   "description": "high horology",
-=======
-  "name": "views",
-  "version": "1.0.0",
-  "description": "timepieces",
->>>>>>> d8ac2eaf54f5833297f42efacf4c628458319a82
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-<<<<<<< HEAD
   "author": "gama munoz f",
-=======
-  "author": "gfhdjs",
->>>>>>> d8ac2eaf54f5833297f42efacf4c628458319a82
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
