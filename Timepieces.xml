@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue>
-  <section name="Sport Watches">
+<catalogue>  <!--here we grab all the info to put it into the form for the user features input and we divide everything for the form -->
+  <section name="Sport Watches">   <!--this is a secction -->
     <watch original="true">
       <brand>Moonwatch Omega</brand>
       <price>10,100.00</price>
@@ -30,7 +30,7 @@
       <stock>Available</stock>
     </watch>
   </section>
-  <section name="Casual Watches">
+  <section name="Casual Watches"><!--this is a secction -->
     <watch>
       <brand>Rolex Sea-Dweller</brand>
       <price>15,000.00</price>
@@ -53,7 +53,7 @@
       <stock>Available</stock>
     </watch>
   </section>
-  <section name="Luxury Watches">
+  <section name="Luxury Watches"><!--this is a secction -->
     <watch>
       <brand>Patek Philippe Men's Grand Complication Ref. 5078G</brand>
       <price>23,000.00</price>
@@ -76,7 +76,7 @@
       <stock>Unavailable</stock>
     </watch>
   </section>
-  <section name="Dive Watches">
+  <section name="Dive Watches"><!--this is a secction -->
     <watch>
       <brand>Ballon Bleu de Cartier</brand>
       <price>5,650</price>
@@ -99,7 +99,7 @@
       <stock>Available</stock>
     </watch>
   </section>
-  <section name="Chronograph Watches">
+  <section name="Chronograph Watches"><!--this is a secction -->
     <watch>
       <brand>Mille Miglia Classic Chronograph</brand>
       <price>4,580</price>
