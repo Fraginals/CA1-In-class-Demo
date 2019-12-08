@@ -22,6 +22,13 @@
       <discount>20%</discount>
       <stock>Available</stock>
     </watch>
+    <watch>
+      <brand>Rolex Submarine</brand>
+      <price>€10,000.00</price>
+      <precision>2356</precision>
+      <discount>10%</discount>
+      <stock>Available</stock>
+    </watch>
   </section>
   <section name="Casual Watches">
     <watch>
@@ -118,5 +125,5 @@
 </catalogue>
 
 
-<!-- The above code belongs to the github account: https://github.com/mikhail-cct/CA1-In-class-Demo.git, -->
+<!-- The following code belongs to the github account: https://github.com/mikhail-cct/CA1-In-class-Demo.git, -->
 <!-- which was adjusted and mofidied in order to create the "Timepieces" Web App -->

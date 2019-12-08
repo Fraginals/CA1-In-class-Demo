@@ -59,54 +59,53 @@ router.get('/get/html', function(req, res) {
 
 });
 
-// POST request to add to JSON & XML files
+// This method allows a POST request adding to XML files and JSON  
 router.post('/post/json', function(req, res) {
 
-  // Function to read in a JSON file, add to it & convert to XML
+  // This function permits us to read a JSON file, adding info to it and converting it into an XML file
   function appendJSON(obj) {
-    // Function to read in XML file, convert it to JSON, add a new object and write back to XML file
+    // This enable us to read an XML file, then convert it to JSON adding a new object and viceversa, converting into an XML file
     xmlFileToJs('Timepieces.xml', function(err, result) {
       if (err) throw (err);
-      //This is where you pass on information from the form inside index.html in a form of JSON and navigate through our JSON (XML) file to create a new entree object
+      //In this section we are passing the information from the form inside the index file in a form of JSON and through the JSON (XML) file we create a new entree object
       result.catalogue.section[obj.sec_n].watch.push({'brand': obj.brand, 'price': obj.price, 'precision': obj.precision, 'discount': obj.discount, 'stock': obj.stock}); //If your XML elements are differet, this is where you have to change to your own element names
-      //Converting back to our original XML file from JSON
+      //Here we are converting from JSON to the original XML file!!
       jsToXmlFile('Timepieces.xml', result, function(err) {
         if (err) console.log(err);
       })
     })
   };
 
-  // Call appendJSON function and pass in body of the current POST request
+  // We are calling the appendJSON function and passing the current POST request
   appendJSON(req.body);
 
-  // Re-direct the browser back to the page, where the POST request came from
+  // This response helps to redirect the browser back to the page, where the post request is originated
   res.redirect('back');
 
 });
 
-// POST request to add to JSON & XML files
+// This method is a post request that allow us adding to XML files and JSON 
 router.post('/post/delete', function(req, res) {
-
-  // Function to read in a JSON file, add to it & convert to XML
+ // This function permits us to read a JSON file, adding info to it and converting it into an XML file
   function deleteJSON(obj) {
-    // Function to read in XML file, convert it to JSON, delete the required object and write back to XML file
+    // This enable us to read an XML file, then convert it to JSON, deleting an especific object and write to a XML file
     xmlFileToJs('Timepieces.xml', function(err, result) {
       if (err) throw (err);
       // Deleting the object in regard to the position of the section(0,1,2 etc) and position of the entree(0,1,2 etc) obtained from index.html
       delete result.catalogue.section[obj.section].watch[obj.watch];/* */
-      //This is where we convert from JSON and write back our XML file
-      jsToXmlFile('Timepieces.xml', result, function(err) {/*It takes the JSON back to the XML and save it*/ 
+      //This is where we convert from JSON to the XML file
+      jsToXmlFile('Timepieces.xml', result, function(err) {/*When converting from JSON to XML it save it*/ 
         if (err) console.log(err);
       })
     })
   }
 
-  // Call appendJSON function and pass in body of the current POST request
+  // Here we are calling the deleteJSON function and and passing the current POST request
   deleteJSON(req.body);
 
 });
 
-//This is where we as the server to be listening to user with a specified IP and Port
+//Here is where we connect to the server which is listening through an especific IP and Port
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function() {
   var addr = server.address();
   console.log("Server listening at", addr.address + ":" + addr.port);

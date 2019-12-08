@@ -4,9 +4,9 @@
                 <table id="menuTable" class="indent">
                     <thead>
                         <tr>
-                            <th colspan="6">Timepieces Catalogue</th>
+                            <th colspan="6">Timepieces Catalogue</th><!--Implementing 6 columns for the table -->
                         </tr>
-                        <tr>
+                        <tr><!--all the watch's features that the user will use to input the info into the form!! -->
                             <th class="select">Select</th>
                             <th class="brand">Brand</th>
                             <th class="price">Price</th>
@@ -15,7 +15,7 @@
                             <th class="stock">Stock</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody>    <!--goes back to the catalogue and section to take the info from the XML file -->
                         <xsl:for-each select="/catalogue/section">
                             <tr>
                                 <td colspan="6">
@@ -28,22 +28,22 @@
                                     <xsl:value-of select="boolean(./@original)" />
                                 </xsl:attribute>
                                 <td align="center">
-                                    <input name="item0" type="checkbox" />
+                                    <input name="item0" type="checkbox" />  <!--setting up the checkbox -->
                                 </td>
                                 <td>
-                                    <xsl:value-of select="brand" />
+                                    <xsl:value-of select="brand" /><!--setting up the brand title -->
                                 </td>
                                 <td align="right">
-                                    <xsl:value-of select="price" />
+                                    <xsl:value-of select="price" /><!--setting up the price title -->
                                 </td>
                                  <td align="right">
-                                        <xsl:value-of select="precision" />
+                                        <xsl:value-of select="precision" /><!--setting up the precision title -->
                                     </td>
                                     <td align="right">
-                                        <xsl:value-of select="discount" />
+                                        <xsl:value-of select="discount" /><!--setting up the discount title -->
                                     </td>
                                     <td align="right">
-                                        <xsl:value-of select="stock" />
+                                        <xsl:value-of select="stock" /><!--setting up the stock title -->
                                     </td>
                             </tr>
                             </xsl:for-each>

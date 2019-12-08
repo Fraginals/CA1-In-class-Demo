@@ -10,7 +10,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>Timepieces WebApp</title>
-	<!-- Bootstrap core CSS -->
+	<!-- The following links are requesting Bootstrap, Semantic UI, the css file, jquery  and fontawesome for a better styling  -->
 	<link rel="stylesheet" type= "text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/Timepieces.css" rel="stylesheet">
@@ -24,21 +24,21 @@
 </head>
 
 <body>
-	<!-- Navigation -->
+	<!-- This allows us to set the nav bar on top of the page -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
 		<div class="container">	<a class="navbar-brand" href="#">Luxury and Designer Watches at Haute Horlogerie</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">	<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right"><!-- setting up the titles on top of the page -->
 					<li class="nav-item"><a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Watches</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Magazine</a></li>
-                    <li><a href="#">Sign Up  <i class="edit outline"></i></i></a></li>
-                    <li><a href="#"></i>Login  <i class="sign-in"></a></li>
-				    <li><a href="#"></i>Logout  <i class="sign-out"></a></li>
+                    <li><a href="#">Sign Up  <i class="edit outline"></i></i></a></li><!-- implementing icons beside the titles -->
+                    <li><a href="#"></i>Login  <i class="sign-in"></a></li><!-- implementing icons beside the titles -->
+				    <li><a href="#"></i>Logout  <i class="sign-out"></a></li><!-- implementing icons beside the titles -->
 				
 
 
@@ -46,21 +46,19 @@
 			</div>
 		</div>
 	</nav>
-	<!-- Page Content -->
+	<!-- This is the content of the page -->
 	<div class="container">
-    <header class="jumbotron">
-		<!--<div class="row">
-			<div class="col-lg-12 text-center">-->
+    <header class="jumbotron"><!-- we are adding a jumbotron to show off the title of the web app -->
 				<h1 class="mt-5">Welcome to Timepieces</h1>
 				<p class="lead">Select your watch from our catalogue</p>
     </header>
             
             
-			<div id="results" class="col-lg-8 text-center order-3"></div> <!-- with the div called results is where the table -->
-			<div class="col-lg-4 text-center order-2">                <!--is going to be put in-->
+			<div id="results" class="col-lg-8 text-center order-3"></div> <!-- with the div called results is where the table is going to be put in -->
+			<div class="col-lg-4 text-center order-2">                
 				<form enctype="application/json" action="/post/json" method="post">
 					<div class="form-group">
-						<select class="form-control" name="sec_n">
+						<select class="form-control" name="sec_n"><!--here is the form where we add all the sections!-->
 						<option value="0">Sport Watches</option>
                         <option value="1">Casual Watches</option>
                         <option value="2">Luxury Watches</option>
@@ -68,7 +66,7 @@
                         <option value="4">Chronograph Watches</option>
 						</select>
 					</div>
-					<div class="form-group">
+					<div class="form-group"><!-- This is a form that uses place holders on each entree for the watches -->
 						<input class="form-control" type="text" name="brand" placeholder="Item">
 					</div>
 					<div class="form-group">
@@ -85,10 +83,10 @@
 					</div>
 
 
-                    <div>
+                    <div><!--setting up the button in order to input the information from the user  -->
 					<button type="submit" class="btn btn-primary btn-block">Submit</button>
                     </div>
-                </form>
+                </form><!--setting up the "delete" button in order to delete a row from the table -->
                     <button id="delete" class="btn btn-block btn-warning">Delete</button>
                     <p class="text-muted">To delete an item please click on the especif raw</p>
 
@@ -96,27 +94,18 @@
             </div>
 		</div>
 	</div>
-	<!-- <footer class="footer">
-		<div class="container">	<span class="text-muted">&copy; 2019</span>
-		</div>
-	</footer> -->
+
 
     
-<hr>
+<hr>  <!--this is a bar with movement just to style the bottom of the page, and it goes all the way horizontally  -->
 <div class="progress">
   <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
     <span class="sr-only">100% Complete</span>
   </div>
 </div>
 
-<!-- <footer class="footer"> -->
-      <div class="uicontainer">
-        <span class="text-muted">&copy;Copyright Timepieces SA. All rights reserved.  Terms of Use | Privacy Notice | Cookie Notice></span>
-      </div>
-      <a class="nav-link" href="#">Go up!</a>
-    <!-- </footer> -->
 
-<hr>
+<hr>  <!--setting up icons representing companies that are linked to the timepieces app  -->
 <div class="containerbottom">
  
 <button class="ui facebook button">
@@ -135,11 +124,21 @@
   <i class="youtube icon"></i>
   YouTube
 </button>
-
+<a class="nav-link" href="#">Go up!</a>
 </div>
 </br>
+<!-- this is the footer that I'm using to put the phone number and copyright!-->
+      <div class="uicontainer">
+      <hr>
+        <span class="text-muted">If you have any query please call us at 353-874559368</span>
+        <hr>
+        <span class="text-muted">&copy;Copyright Timepieces SA. All rights reserved.  Terms of Use | Privacy Notice | Cookie Notice></span>
+        
 
-	<!-- Bootstrap core JavaScript -->
+      </div>
+      
+
+	<!-- Here I'm requesting Bootstrap, JavaScript and jquery -->
 	<script src="jquery/jquery.min.js"></script>
 	<script src="jquery/table.js"></script>
 	<script src="js/bootstrap.min.js"></script>
