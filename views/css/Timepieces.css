@@ -28,24 +28,27 @@ margin-bottom: 60px;/* This margin is measured and related by the footer height 
   background-color: #f5f5f5;/*Giving the color to the background */
 }
 table, th, td {
-     border-collapse: collapse;/*sets whether table borders should collapse into a single border or be separated as HTML*/
+     border-collapse: collapse;/*sets table, headers, and  borders should collapse into a single border or be separated as HTML*/
      border: 1px solid black;/*sets the color of the border with a specific height*/
      text-align: center;/*centering the text*/
 
 }
  table {
-     border-collapse: collapse;
-     width:100%;
+     border-collapse: collapse;/*sets whether table borders should collapse into a single border or be separated as HTML*/
+     width:100%;/*Making the element's content area of the table exactly equal to the width of its parent*/
 }
- td, th {
-     border: 1px solid #ced4da;
-     padding: 0.5rem;
-     text-align: left;
+ td, th { 
+     border: 0.5px solid #67a9eb; /*giving the size border for the entire table through a solid line and a especific type of color */
+     padding: 5.0rem;/*Generating space around the element's content, inside of any defined borders*/
+     text-align: center;/* centering the text in relation to the section, brand, price, certified precision, discount and stock content areas*/
+     outline-style: ridge; /*Specifying a 3D ridged outline where the effect depends on the outline-color blue*/
+     outline-color: rgb(113, 195, 233);/* This is the line that is drawn outside the borders to make the element "stand out"*/
 }
  th {
-     font-weight: bold;
+     font-weight: bolder;/*Setting the weight (boldness) of the font, normal(400) is the default, and in this case is 700 which means Bold*/
+     text-align:center;/* centering the text only for the text headers*/
 }
 .selected {
-            background-color: #3591dc;
-            color: #FFF;
+            background-color: #3591dc;/*Styling the background with a specific color*/
+            color: #FFF;/*Using this hex color code which is a web safe color*/
 }

@@ -22,16 +22,16 @@ function draw_table()//this is the code to draw the table, it goes to the link /
 	$.getJSONuncached("/get/html")
 };
 
-function select_row()//here we can select the row and selecting the row for the deletion
+function select_row()//here we can select the row and selecting the row for the deletion function
 {
 	$("#menuTable tbody tr[id]").click(function ()
 	{
 		$(".selected").removeClass("selected");
         $(this).addClass("selected");
-        //I'm going to calculate the section and get entree for the row 
+        //I'm going to calculate the section and get entree for the row getting it from the id created!
         var section = $(this).prevAll("tr").children("td[colspan='6']").length - 1;
-        //I'm getting it from the current row which is red color, and the getting all the previous rows
-        //and afterwards getting inside the children of those rows and using .length-1 I can get the section number
+        //I'm getting it from the current row which is green color, and the getting all the previous rows
+        //and afterwards getting inside the children of those rows(table data for 6 columns) and using .length-1 I can get the section number
 		var watch = $(this).attr("id") - 1;//getting it from the id
 		delete_row(section, watch);//I'm passing here the section and the entree called watch
 	})
@@ -42,7 +42,7 @@ function delete_row(sec, wat)
 	$("#delete").click(function ()
 	{
 		$.ajax(
-		{
+		{     /* the url os linked to the app.js router.post function*/ 
 			url: "/post/delete",//the deletion is happenig through the post already called that our
 			type: "POST",        //app.js is managing and we send a json file that has a section number
 			data:                //and an entree number called watch
